@@ -1,4 +1,4 @@
-<article id="shop" class="h-screen pt-8">
+<article id="shop" class="h-screen pt-8 container mx-auto">
     <section class="flex items-center justify-between">
         <h1 class="uppercase text-4xl font-bold">Shop Best Coffee</h1>
         <article class="flex items-end gap-8">
@@ -42,7 +42,7 @@
         </span>
     </section>
 </article>
-<article class="flex flex-col gap-40 pt-8">
+<article class="flex flex-col gap-40 pt-8 container mx-auto">
     <article class="grid grid-cols-4">
         @for ($i = 0; $i < 4; $i++)
             <article class="flex {{ $i % 2 == 0 ? 'flex-col' : 'flex-col-reverse' }} flex-col h-full">
@@ -62,7 +62,7 @@
             </article>
         @endfor
     </article>
-    <article class="grid grid-cols-2 gap-20">
+    <article id="shop-single" class="grid grid-cols-2 gap-20">
         <section class="flex flex-col gap-8">
             <h1 class="uppercase font-bold text-4xl">New Arrivals</h1>
             <article class="flex flex-col gap-4">
@@ -147,27 +147,27 @@
             </section>
         </span>
     </article>
-    <article class="h-fit grid grid-cols-4 border-t-2 border-b-4 py-4 border-gray-300">
-        <figure class="flex flex-col items-center justify-center">
-            <img class="w-16" src="https://img.icons8.com/B7B7B7/carbon_copy/2x/coffee-to-go.png" alt="">
-            <h1 class="uppercase font-semibold text-xl">Quick Delivery</h1>
-            <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
-        </figure>
-        <figure class="flex flex-col items-center justify-center">
-            <img class="w-16" src="https://img.icons8.com/B7B7B7/carbon_copy/2x/coffee-pot.png" alt="">
-            <h1 class="uppercase font-semibold text-xl">Pick up in store</h1>
-            <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
-        </figure>
-        <figure class="flex flex-col items-center justify-center">
-            <img class="w-16" src="https://img.icons8.com/B7B7B7/carbon_copy/2x/cafe.png" alt="">
-            <h1 class="uppercase font-semibold text-xl">No shipping charge</h1>
-            <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
-        </figure>
-        <figure class="flex flex-col items-center justify-center">
-            <img class="w-16" src="https://img.icons8.com/B7B7B7/carbon_copy/2x/paper-bag-with-seeds.png"
-                alt="">
-            <h1 class="uppercase font-semibold text-xl">Friendly service</h1>
-            <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
-        </figure>
-    </article>
+</article>
+<article class="h-fit grid grid-cols-4 border-t-2 border-b-4 py-4 mt-16 border-gray-300">
+    <figure class="flex flex-col items-center justify-center">
+        <img class="w-16" src="https://img.icons8.com/B7B7B7/carbon_copy/2x/coffee-to-go.png" alt="">
+        <h1 class="uppercase font-semibold text-xl">Quick Delivery</h1>
+        <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
+    </figure>
+    <figure class="flex flex-col items-center justify-center">
+        <img class="w-16" src="https://img.icons8.com/B7B7B7/carbon_copy/2x/coffee-pot.png" alt="">
+        <h1 class="uppercase font-semibold text-xl">Pick up in store</h1>
+        <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
+    </figure>
+    <figure class="flex flex-col items-center justify-center">
+        <img class="w-16" src="https://img.icons8.com/B7B7B7/carbon_copy/2x/cafe.png" alt="">
+        <h1 class="uppercase font-semibold text-xl">No shipping charge</h1>
+        <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
+    </figure>
+    <figure class="flex flex-col items-center justify-center">
+        <img class="w-16" src="https://img.icons8.com/B7B7B7/carbon_copy/2x/paper-bag-with-seeds.png"
+            alt="">
+        <h1 class="uppercase font-semibold text-xl">Friendly service</h1>
+        <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
+    </figure>
 </article>

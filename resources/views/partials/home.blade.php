@@ -1,4 +1,4 @@
-<article class="h-[calc(100vh-20.5vh)] grid grid-cols-1 md:grid-cols-2">
+<article class="h-[calc(100vh-20.5vh)] grid grid-cols-1 md:grid-cols-2 container mx-auto">
     <section class="flex items-center justify-center border">
         <img class="rounded-tl-lg rounded-bl-lg object-cover w-full h-full"
             src="https://static.tnn.in/thumb/msid-104069590,thumbsize-34210,width-1280,height-720,resizemode-75/104069590.jpg"
@@ -15,7 +15,7 @@
         <button class="border border-gray-500 py-2 px-5 font-bold font-sans rounded-full hover:bg-primary transition-all">Order
             Now</button>
     </section>
-    <section class="col-span-2 h-full flex justify-center items-center">
+    <section id="about" class="col-span-2 h-full flex justify-center items-center">
         @include('components.quote-without-writer')
     </section>
 </article>

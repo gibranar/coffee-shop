@@ -1,4 +1,4 @@
-<article class="flex justify-between items-center py-4 border-y px-4">
+<article class="flex justify-between items-center py-4 border-y px-4 container mx-auto">
     <nav class="uppercase font-semibold w-1/4 flex items-center justify-between">
         <a href="#home" class="text-primary">Home</a>
         <a href="#shop">Shop</a>

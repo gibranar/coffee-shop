@@ -16,7 +16,7 @@
     @yield('styles')
 </head>
 
-<body class="font-coldiac text-primaryDark antialiased bg-gray-50 container mx-auto scroll-smooth">
+<body class="font-coldiac text-primaryDark antialiased bg-gray-50 scroll-smooth">
     <header class="w-full h-full mt-12">
         @include('partials.topbar')
     </header>
@@ -24,14 +24,15 @@
         @include('partials.home')
         @include('partials.shop')
         @include('partials.blog')
+        @include('partials.pages')
     </main>
-    <footer>
+    <footer class="mt-40">
         @include('partials.footer')
     </footer>
 
     <span id="scrollToTopButton"
         class="fixed bottom-4 right-4 bg-primaryDark p-2 rounded-full opacity-0 translate-y-4 transition-all animate-bounce duration-500 ease-in-out">
-        <a href="#home" class="text-primary">
+        <a href="#home" class="text-white">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
