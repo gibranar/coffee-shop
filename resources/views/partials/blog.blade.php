@@ -1,4 +1,4 @@
-<article id="blog" class="mt-40 container mx-auto">
+<article id="blog" class="mt-40 xl:px-32 2xl:px-40">
     <article class="flex justify-between items-center">
         <h1 class="uppercase font-bold text-4xl">Read our blogs</h1>
         <h3 class="uppercase font-bold underline underline-offset-8">Read blog posts</h3>

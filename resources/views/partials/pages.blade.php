@@ -1,4 +1,4 @@
-<article id="pages" class="mt-40 container mx-auto">
+<article id="pages" class="mt-40 xl:px-32 2xl:px-40">
     <h1 class="uppercase text-center font-bold text-4xl">Follow Our Instagram #Beanie</h1>
     <article class="grid grid-cols-6 gap-4 mt-4">
         <img class="rounded-lg w-full h-full object-cover"

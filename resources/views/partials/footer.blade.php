@@ -1,4 +1,4 @@
-<article id="contact" class="grid grid-cols-4 container mx-auto">
+<article id="contact" class="grid grid-cols-4 xl:px-32 2xl:px-40">
     <nav class="uppercase font-semibold w-1/4 flex flex-col gap-4 text-nowrap">
         <a href="#home" class="hover:text-primary">Home</a>
         <a href="#about" class="hover:text-primary">About</a>

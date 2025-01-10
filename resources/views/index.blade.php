@@ -17,7 +17,7 @@
 </head>
 
 <body class="font-coldiac text-primaryDark antialiased bg-gray-50 scroll-smooth">
-    <header class="w-full h-full mt-12">
+    <header class="w-full h-full mt-12 xl:px-32 2xl:px-40">
         @include('partials.topbar')
     </header>
     <main class="mt-16 flex flex-col">

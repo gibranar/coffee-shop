@@ -1,4 +1,4 @@
-<article id="shop" class="h-screen pt-8 container mx-auto">
+<article id="shop" class="h-screen pt-8 xl:px-32 2xl:px-40">
     <section class="flex items-center justify-between">
         <h1 class="uppercase text-4xl font-bold">Shop Best Coffee</h1>
         <article class="flex items-end gap-8">
@@ -42,7 +42,7 @@
         </span>
     </section>
 </article>
-<article class="flex flex-col gap-40 pt-8 container mx-auto">
+<article class="flex flex-col gap-40 xl:mt-28 2xl:mt-8 xl:px-32 2xl:px-40">
     <article class="grid grid-cols-4">
         @for ($i = 0; $i < 4; $i++)
             <article class="flex {{ $i % 2 == 0 ? 'flex-col' : 'flex-col-reverse' }} flex-col h-full">
