@@ -6,6 +6,10 @@ Route::get('/', function () {
     return view('index');
 })->name('index');
 
+Route::get('likes', function () {
+    return view('dashboard.likes');
+})->name('likes.index');
+
 Route::get('cart', function () {
-    return view('partials.cart');
+    return view('dashboard.cart');
 })->name('cart.index');

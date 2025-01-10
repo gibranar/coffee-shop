@@ -1,22 +1,5 @@
-<!DOCTYPE html>
-<html id="home" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>Web Test Nexa</title>
-
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.bunny.net">
-    <link href="https://fonts.bunny.net/css?family=figtree:100,200,300,400,500,600,700,800,900&display=swap"
-        rel="stylesheet" />
-
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-    @yield('styles')
-</head>
-
-<body class="font-coldiac text-primaryDark antialiased bg-gray-50 scroll-smooth">
+@extends('skeleton')
+@section('content')
     <header class="w-full h-full mt-12 xl:px-32 2xl:px-40">
         @include('partials.topbar')
     </header>
@@ -33,14 +16,15 @@
     <span id="scrollToTopButton"
         class="fixed bottom-4 right-4 bg-primaryDark p-2 rounded-full opacity-0 translate-y-4 transition-all animate-bounce duration-500 ease-in-out">
         <a href="#home" class="text-white">
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                stroke="currentColor" class="size-6">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="size-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 10.5 12 3m0 0 7.5 7.5M12 3v18" />
             </svg>
         </a>
     </span>
+@endsection
 
-    @yield('scripts')
+@section('scripts')
     <script>
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
@@ -67,6 +51,4 @@
             }
         });
     </script>
-</body>
-
-</html>
+@endsection

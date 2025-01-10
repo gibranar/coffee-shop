@@ -1,7 +1,7 @@
 <article id="shop" class="h-screen pt-8 xl:px-32 2xl:px-40">
     <section class="flex items-center justify-between">
         <h1 class="uppercase text-4xl font-bold">Shop Best Coffee</h1>
-        <article class="flex items-end gap-8">
+        <article class="flex items-end gap-8 mt-4">
             <a class="underline underline-offset-8 uppercase font-semibold" href="">View All</a>
             <section class="flex items-center gap-2">
                 <span class="bg-gray-300 p-1 flex justify-center items-center rounded-md">
@@ -20,9 +20,7 @@
         </article>
     </section>
     <section class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
-        @for ($i = 0; $i < 4; $i++)
-            @include('components.shop-card')
-        @endfor
+        @include('components.shop-card')
     </section>
     <section class="h-1/2 pt-8 flex justify-center items-center relative">
         <span
@@ -43,7 +41,7 @@
     </section>
 </article>
 <article class="flex flex-col gap-40 xl:mt-28 2xl:mt-8 xl:px-32 2xl:px-40">
-    <article class="grid grid-cols-4">
+    {{-- <article class="grid grid-cols-4">
         @for ($i = 0; $i < 4; $i++)
             <article class="flex {{ $i % 2 == 0 ? 'flex-col' : 'flex-col-reverse' }} flex-col h-full">
                 <section class="h-1/2">
@@ -53,7 +51,8 @@
                 </section>
                 <section class="h-1/2 flex flex-col gap-2 justify-center items-center text-center px-8">
                     <h1 class="uppercase font-medium text-2xl font-calibri">Coffee Accessories</h1>
-                    <p class="font-light leading-6 font-sans">Lorem ipsum dolor sit amet consectetur aliquam dicta autem,
+                    <p class="font-light leading-6 font-sans">Lorem ipsum dolor sit amet consectetur aliquam dicta
+                        autem,
                         recusandae
                         libero
                         consectetur id! Soluta temporibus dolor ut.</p>
@@ -61,45 +60,170 @@
                 </section>
             </article>
         @endfor
+    </article> --}}
+    @php
+        $items = [
+            [
+                'image' => 'shop-coffee-1.jpg',
+                'title' => 'Coffee Accessories',
+                'description' =>
+                    'Lorem ipsum dolor sit amet consectetur aliquam dicta autem, recusandae libero consectetur id! Soluta temporibus dolor ut.',
+                'category' => 'Shop Category',
+            ],
+            [
+                'image' => 'shop-coffee-2.jpg',
+                'title' => 'Premium Coffee Beans',
+                'description' =>
+                    'Curabitur nec eros velit. Vestibulum aliquam id orci ut bibendum. Cras interdum lorem ut ipsum viverra faucibus.',
+                'category' => 'Discover More',
+            ],
+            [
+                'image' => 'shop-coffee-3.jpg',
+                'title' => 'Modern Coffee Makers',
+                'description' =>
+                    'Etiam accumsan odio eget elit volutpat, et tincidunt mi volutpat. Integer tempor justo vel facilisis auctor.',
+                'category' => 'Explore Products',
+            ],
+            [
+                'image' => 'shop-coffee-4.jpg',
+                'title' => 'Stylish Coffee Cups',
+                'description' =>
+                    'Proin gravida ligula id magna vehicula, ut bibendum massa venenatis. Fusce sodales nisi quis arcu tempus auctor.',
+                'category' => 'View Collection',
+            ],
+        ];
+    @endphp
+
+    <article class="grid grid-cols-4 gap-4">
+        @foreach ($items as $index => $item)
+            <article class="flex {{ $index % 2 == 0 ? 'flex-col' : 'flex-col-reverse' }} h-full">
+                <section class="h-1/2">
+                    <img class="w-full h-full bg-cover rounded" src="{{ asset('img/'. $item['image']) }}" alt="{{ $item['title'] }}">
+                </section>
+                <section class="h-1/2 flex flex-col gap-2 justify-center items-center text-center px-8">
+                    <h1 class="uppercase font-medium text-2xl font-calibri">{{ $item['title'] }}</h1>
+                    <p class="font-light leading-6 font-sans">{{ $item['description'] }}</p>
+                    <h2 class="uppercase font-bold font-sans underline underline-offset-8">{{ $item['category'] }}</h2>
+                </section>
+            </article>
+        @endforeach
     </article>
+
     <article id="shop-single" class="grid grid-cols-2 gap-20">
         <section class="flex flex-col gap-8">
             <h1 class="uppercase font-bold text-4xl">New Arrivals</h1>
             <article class="flex flex-col gap-4">
-                @for ($i = 0; $i < 5; $i++)
+                @php
+                    $newArrivals = [
+                        [
+                            'image' => 'https://mybartender.com/wp-content/uploads/2024/10/Coconut-Kiss-of-Death.png',
+                            'name' => 'Coconut Kiss',
+                            'description' => 'Refreshing your day with coconut',
+                            'price' => '$2.99',
+                        ],
+                        [
+                            'image' => 'https://images.unsplash.com/photo-1504674900247-0877df9cc836',
+                            'name' => 'Tropical Breeze',
+                            'description' => 'Refreshing and exotic drink',
+                            'price' => '$3.99',
+                        ],
+                        [
+                            'image' =>
+                                'https://img.freepik.com/free-photo/glass-strawberry-sauce-topped-with-ice-cream-strawberries_140725-1452.jpg?ga=GA1.1.1316726918.1729530717&semt=ais_hybrid',
+                            'name' => 'Berry Bliss',
+                            'description' => 'A delightful blend of berries',
+                            'price' => '$4.49',
+                        ],
+                        [
+                            'image' =>
+                                'https://img.freepik.com/free-photo/delicious-mojito_144627-27596.jpg?ga=GA1.1.1316726918.1729530717&semt=ais_hybrid',
+                            'name' => 'Minty Fresh',
+                            'description' => 'Cool and invigorating',
+                            'price' => '$2.49',
+                        ],
+                        [
+                            'image' =>
+                                'https://img.freepik.com/free-photo/sotol-drink-with-pineapple-still-life_23-2151018040.jpg?ga=GA1.1.1316726918.1729530717&semt=ais_hybrid',
+                            'name' => 'Golden Sunset',
+                            'description' => 'A drink as beautiful as the sunset',
+                            'price' => '$5.29',
+                        ],
+                    ];
+                @endphp
+
+                @foreach ($newArrivals as $newArrival)
                     <section class="w-full flex gap-4 justify-between">
                         <figure class="flex gap-4 items-center">
-                            <img class="w-14 h-14 object-cover rounded-full"
-                                src="https://mybartender.com/wp-content/uploads/2024/10/Coconut-Kiss-of-Death.png"
-                                alt="">
+                            <img class="w-14 h-14 object-cover rounded-full" src="{{ $newArrival['image'] }}"
+                                alt="{{ $newArrival['name'] }}">
                             <figcaption class="flex flex-col gap-1">
-                                <h2 class="uppercase font-bold">Coconut Kiss</h2>
-                                Lorem ipsum dolor sit amet
+                                <h2 class="uppercase font-bold">{{ $newArrival['name'] }}</h2>
+                                {{ $newArrival['description'] }}
                             </figcaption>
                         </figure>
-                        <h2 class="font-semibold">$2.99</h2>
+                        <h2 class="font-semibold">{{ $newArrival['price'] }}</h2>
                     </section>
-                @endfor
+                @endforeach
+
             </article>
             <a href="" class="w-fit uppercase font-semibold underline underline-offset-8">View All</a>
         </section>
         <section class="flex flex-col gap-8">
             <h1 class="uppercase font-bold text-4xl">Best Selling</h1>
             <article class="flex flex-col gap-4">
-                @for ($i = 0; $i < 5; $i++)
+                @php
+                    $bestSellingCoffees = [
+                        [
+                            'image' => 'https://mybartender.com/wp-content/uploads/2024/10/Coconut-Kiss-of-Death.png',
+                            'name' => 'Coconut Kiss',
+                            'description' => 'Lorem ipsum dolor sit amet',
+                            'price' => '$2.99',
+                        ],
+                        [
+                            'image' =>
+                                'https://img.freepik.com/free-photo/close-up-hand-holding-beverage-with-drink_23-2148349636.jpg?ga=GA1.1.1316726918.1729530717&semt=ais_hybrid',
+                            'name' => 'Vanilla Latte',
+                            'description' => 'Rich and creamy flavor',
+                            'price' => '$3.49',
+                        ],
+                        [
+                            'image' =>
+                                'https://img.freepik.com/free-photo/vienna-coffee-cup_1203-9407.jpg?ga=GA1.1.1316726918.1729530717&semt=ais_hybrid',
+                            'name' => 'Espresso Delight',
+                            'description' => 'Bold and intense',
+                            'price' => '$4.29',
+                        ],
+                        [
+                            'image' =>
+                                'https://img.freepik.com/free-photo/frappe-coffee-white_144627-17433.jpg?ga=GA1.1.1316726918.1729530717&semt=ais_hybrid',
+                            'name' => 'Caramel Macchiato',
+                            'description' => 'Sweet and smooth',
+                            'price' => '$3.99',
+                        ],
+                        [
+                            'image' =>
+                                'https://img.freepik.com/free-photo/still-life-with-iced-coffee-beverage_23-2149648734.jpg?ga=GA1.1.1316726918.1729530717&semt=ais_hybrid',
+                            'name' => 'Mocha Bliss',
+                            'description' => 'Chocolatey and aromatic',
+                            'price' => '$4.49',
+                        ],
+                    ];
+                @endphp
+
+                @foreach ($bestSellingCoffees as $bestSellingCoffee)
                     <section class="w-full flex gap-4 justify-between">
                         <figure class="flex gap-4 items-center">
-                            <img class="w-14 h-14 object-cover rounded-full"
-                                src="https://mybartender.com/wp-content/uploads/2024/10/Coconut-Kiss-of-Death.png"
-                                alt="">
+                            <img class="w-14 h-14 object-cover rounded-full" src="{{ $bestSellingCoffee['image'] }}"
+                                alt="{{ $bestSellingCoffee['name'] }}">
                             <figcaption class="flex flex-col gap-1">
-                                <h2 class="uppercase font-bold">Coconut Kiss</h2>
-                                Lorem ipsum dolor sit amet
+                                <h2 class="uppercase font-bold">{{ $bestSellingCoffee['name'] }}</h2>
+                                {{ $bestSellingCoffee['description'] }}
                             </figcaption>
                         </figure>
-                        <h2 class="font-semibold">$2.99</h2>
+                        <h2 class="font-semibold">{{ $bestSellingCoffee['price'] }}</h2>
                     </section>
-                @endfor
+                @endforeach
+
             </article>
             <a href="" class="w-fit uppercase font-semibold underline underline-offset-8">View All</a>
         </section>
@@ -152,22 +276,26 @@
     <figure class="flex flex-col items-center justify-center">
         <img class="w-16" src="https://img.icons8.com/B7B7B7/carbon_copy/2x/coffee-to-go.png" alt="">
         <h1 class="uppercase font-semibold text-xl">Quick Delivery</h1>
-        <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
+        <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit
+            amet?!</p>
     </figure>
     <figure class="flex flex-col items-center justify-center">
         <img class="w-16" src="https://img.icons8.com/B7B7B7/carbon_copy/2x/coffee-pot.png" alt="">
         <h1 class="uppercase font-semibold text-xl">Pick up in store</h1>
-        <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
+        <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit
+            amet?!</p>
     </figure>
     <figure class="flex flex-col items-center justify-center">
         <img class="w-16" src="https://img.icons8.com/B7B7B7/carbon_copy/2x/cafe.png" alt="">
         <h1 class="uppercase font-semibold text-xl">No shipping charge</h1>
-        <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
+        <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit
+            amet?!</p>
     </figure>
     <figure class="flex flex-col items-center justify-center">
         <img class="w-16" src="https://img.icons8.com/B7B7B7/carbon_copy/2x/paper-bag-with-seeds.png"
             alt="">
         <h1 class="uppercase font-semibold text-xl">Friendly service</h1>
-        <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
+        <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit
+            amet?!</p>
     </figure>
 </article>
