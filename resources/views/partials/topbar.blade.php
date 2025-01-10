@@ -1,5 +1,5 @@
 <article class="flex justify-between items-center py-4 border-y px-4">
-    <nav class="uppercase w-1/4 flex items-center justify-between">
+    <nav class="uppercase font-semibold w-1/4 flex items-center justify-between">
         <a href="#home" class="text-primary">Home</a>
         <a href="#shop">Shop</a>
         <a href="#blog">Blog</a>
@@ -8,7 +8,7 @@
     <img class="absolute left-1/2 -translate-x-1/2 w-36" src="{{ asset('img/coffee-icon.jpg') }}" alt="Coffee Icon">
     <section class="w-1/4 flex items-center justify-between">
         <span class="relative flex rounded-full py-1.5 px-4 border border-gray-300">
-            <input type="text" class="pr-1 text-sm focus:outline-none placeholder:italic"
+            <input type="text" class="pr-1 text-sm font-calibri focus:outline-none placeholder:italic"
                 placeholder="Search here...">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 stroke="currentColor" class="size-6">

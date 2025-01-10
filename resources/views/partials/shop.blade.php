@@ -1,8 +1,8 @@
 <article id="shop" class="h-screen pt-8">
     <section class="flex items-center justify-between">
-        <h1 class="uppercase text-3xl">Shop Best Coffee</h1>
+        <h1 class="uppercase text-4xl font-bold">Shop Best Coffee</h1>
         <article class="flex items-end gap-8">
-            <a class="border-b border-gray-400 uppercase font-semibold" href="">View All</a>
+            <a class="underline underline-offset-8 uppercase font-semibold" href="">View All</a>
             <section class="flex items-center gap-2">
                 <span class="bg-gray-300 p-1 flex justify-center items-center rounded-md">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
@@ -10,7 +10,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
                     </svg>
                 </span>
-                <span class="bg-primaryDark p-1 flex justify-center items-center rounded-md">
+                <span class="bg-primaryDark2 p-1 flex justify-center items-center rounded-md">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         class="size-6 stroke-gray-200">
                         <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
@@ -32,9 +32,9 @@
                 <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5 8.25 12l7.5-7.5" />
             </svg>
         </span>
-        @include('components.quote-shop')
+        @include('components.quote-with-writer')
         <span
-            class="absolute right-0 flex items-center justify-center border border-gray-300 bg-primaryDark p-3 rounded-full cursor-pointer">
+            class="absolute right-0 flex items-center justify-center border border-gray-300 bg-primaryDark2 p-3 rounded-full cursor-pointer">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                 class="size-6 stroke-gray-200">
                 <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5" />
@@ -52,19 +52,19 @@
                         alt="">
                 </section>
                 <section class="h-1/2 flex flex-col gap-2 justify-center items-center text-center px-8">
-                    <h1 class="uppercase font-medium text-2xl font-serif">Coffee Accessories</h1>
-                    <p class="font-light leading-6">Lorem ipsum dolor sit amet consectetur aliquam dicta autem,
+                    <h1 class="uppercase font-medium text-2xl font-calibri">Coffee Accessories</h1>
+                    <p class="font-light leading-6 font-sans">Lorem ipsum dolor sit amet consectetur aliquam dicta autem,
                         recusandae
                         libero
                         consectetur id! Soluta temporibus dolor ut.</p>
-                    <h2 class="uppercase font-bold border-b border-gray-400">Shop Category</h2>
+                    <h2 class="uppercase font-bold font-sans underline underline-offset-8">Shop Category</h2>
                 </section>
             </article>
         @endfor
     </article>
     <article class="grid grid-cols-2 gap-20">
         <section class="flex flex-col gap-8">
-            <h1 class="uppercase font-bold text-4xl text-primaryDark">New Arrivals</h1>
+            <h1 class="uppercase font-bold text-4xl">New Arrivals</h1>
             <article class="flex flex-col gap-4">
                 @for ($i = 0; $i < 5; $i++)
                     <section class="w-full flex gap-4 justify-between">
@@ -77,14 +77,14 @@
                                 Lorem ipsum dolor sit amet
                             </figcaption>
                         </figure>
-                        <h2 class="font-semibold text-primaryDark">$2.99</h2>
+                        <h2 class="font-semibold">$2.99</h2>
                     </section>
                 @endfor
             </article>
-            <a href="" class="w-fit uppercase font-semibold border-b border-gray-400">View All</a>
+            <a href="" class="w-fit uppercase font-semibold underline underline-offset-8">View All</a>
         </section>
         <section class="flex flex-col gap-8">
-            <h1 class="uppercase font-bold text-4xl text-primaryDark">Best Selling</h1>
+            <h1 class="uppercase font-bold text-4xl">Best Selling</h1>
             <article class="flex flex-col gap-4">
                 @for ($i = 0; $i < 5; $i++)
                     <section class="w-full flex gap-4 justify-between">
@@ -97,15 +97,15 @@
                                 Lorem ipsum dolor sit amet
                             </figcaption>
                         </figure>
-                        <h2 class="font-semibold text-primaryDark">$2.99</h2>
+                        <h2 class="font-semibold">$2.99</h2>
                     </section>
                 @endfor
             </article>
-            <a href="" class="w-fit uppercase font-semibold border-b border-gray-400">View All</a>
+            <a href="" class="w-fit uppercase font-semibold underline underline-offset-8">View All</a>
         </section>
     </article>
     <article class="flex flex-col gap-4 items-center justify-center">
-        <h1 class="uppercase text-primaryDark text-4xl font-bold">Subscribe Us</h1>
+        <h1 class="uppercase text-4xl font-bold">Subscribe Us</h1>
         <p class="font-thin">Lorem ipsum dolor sit amet okuram and consectur.</p>
         <span class="w-1/3 flex flex-col justify-center gap-4">
             <section class="relative flex items-center border border-gray-300 py-2 px-4 rounded-full">
@@ -150,24 +150,24 @@
     <article class="h-fit grid grid-cols-4 border-t-2 border-b-4 py-4 border-gray-300">
         <figure class="flex flex-col items-center justify-center">
             <img class="w-16" src="https://img.icons8.com/B7B7B7/carbon_copy/2x/coffee-to-go.png" alt="">
-            <h1 class="uppercase text-primaryDark font-semibold text-xl">Quick Delivery</h1>
-            <p class="text-center px-8">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
+            <h1 class="uppercase font-semibold text-xl">Quick Delivery</h1>
+            <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
         </figure>
         <figure class="flex flex-col items-center justify-center">
             <img class="w-16" src="https://img.icons8.com/B7B7B7/carbon_copy/2x/coffee-pot.png" alt="">
-            <h1 class="uppercase text-primaryDark font-semibold text-xl">Pick up in store</h1>
-            <p class="text-center px-8">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
+            <h1 class="uppercase font-semibold text-xl">Pick up in store</h1>
+            <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
         </figure>
         <figure class="flex flex-col items-center justify-center">
             <img class="w-16" src="https://img.icons8.com/B7B7B7/carbon_copy/2x/cafe.png" alt="">
-            <h1 class="uppercase text-primaryDark font-semibold text-xl">No shipping charge</h1>
-            <p class="text-center px-8">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
+            <h1 class="uppercase font-semibold text-xl">No shipping charge</h1>
+            <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
         </figure>
         <figure class="flex flex-col items-center justify-center">
             <img class="w-16" src="https://img.icons8.com/B7B7B7/carbon_copy/2x/paper-bag-with-seeds.png"
                 alt="">
-            <h1 class="uppercase text-primaryDark font-semibold text-xl">Friendly service</h1>
-            <p class="text-center px-8">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
+            <h1 class="uppercase font-semibold text-xl">Friendly service</h1>
+            <p class="text-center px-12 font-faberSansStd font-light">Lorem, ipsum dolor sit amet Lorem ipsum dolor, sit amet?!</p>
         </figure>
     </article>
 </article>

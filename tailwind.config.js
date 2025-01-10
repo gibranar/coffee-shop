@@ -13,10 +13,15 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                coldiac: ['Coldiac', ...defaultTheme.fontFamily.sans],
+                calibri: ['Calibri', ...defaultTheme.fontFamily.sans],
+                novantico: ['Novantico', ...defaultTheme.fontFamily.sans],
+                faberSansStd: ['FaberSansStd', ...defaultTheme.fontFamily.sans],
             },
             colors: {
-                primary: "#FDC065",
-                primaryDark: "#261d1d",
+                primary: "#c49d74",
+                primaryDark: "#6c655f",
+                primaryDark2: "#3e3530",
             }
         },
     },

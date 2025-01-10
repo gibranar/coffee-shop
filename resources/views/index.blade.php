@@ -16,13 +16,14 @@
     @yield('styles')
 </head>
 
-<body class="font-sans antialiased bg-gray-50 container mx-auto scroll-smooth">
+<body class="font-coldiac text-primaryDark antialiased bg-gray-50 container mx-auto scroll-smooth">
     <header class="w-full h-full mt-12">
         @include('partials.topbar')
     </header>
     <main class="mt-16 flex flex-col">
         @include('partials.home')
         @include('partials.shop')
+        @include('partials.blog')
     </main>
     <footer>
         @include('partials.footer')

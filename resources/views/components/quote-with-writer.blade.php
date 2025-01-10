@@ -4,5 +4,5 @@
         libero fuga nesciunt quaerat ab explicabo facere unde ipsum et blanditiis officia ipsam consequatur,
         perspiciatis laudantium sed totam."
     </h3>
-    <p class="uppercase text-center font-medium">Sarah Anderson</p>
+    <p class="uppercase text-center font-black">Sarah Anderson</p>
 </article>
